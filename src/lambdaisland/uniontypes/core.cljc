@@ -1,6 +1,6 @@
 (ns lambdaisland.uniontypes.core
   (:require [clojure.walk :refer [prewalk]]
-            [clojure.spec :as s]))
+            [clojure.spec.alpha :as s]))
 
 (s/def ::or-spec-desc (s/cat :or #{'or}
                              :cases (s/+ (s/cat :name keyword? :spec any?))))
